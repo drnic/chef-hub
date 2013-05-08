@@ -1,5 +1,5 @@
 name "hub"
-version "1.0.0"
+version "1.0.1"
 description "git + hub = github"
 long_description  IO.read(File.expand_path('../README.md', __FILE__))
 maintainer "Dr Nic Williams"
