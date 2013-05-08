@@ -1,0 +1,16 @@
+---
+driver_plugin: vagrant
+
+platforms:
+- name: ubuntu-12.04
+  driver_config:
+    # provider: virtualbox
+    provider: vmware_fusion
+    box: precise64
+    require_chef_omnibus: true
+
+suites:
+- name: default
+  run_list:
+    - recipe[hub]
+  attributes: {}
