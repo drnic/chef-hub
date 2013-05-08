@@ -1,0 +1,5 @@
+name "hub"
+version "1.0.0"
+description "git + hub = github"
+maintainer "Dr Nic Williams"
+maintainer_email "drnicwilliams@gmail.com"
