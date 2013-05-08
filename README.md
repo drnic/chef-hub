@@ -2,6 +2,17 @@
 
 Installs the hub command line tool for extending git with github loveliness.
 
+## Development
+
+To clone the source repository and run the integration tests:
+
+```
+$ git clone git@github.com:drnic/chef-hub.git hub
+$ cd hub
+$ bundle
+$ kitchen test
+```
+
 ## Release
 
 There is a helpful rake task to share new cookbook versions.
