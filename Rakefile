@@ -11,7 +11,7 @@ require "kitchen"
 include FileUtils
 
 desc "Share cookbook"
-task :release do
+task :share do
   project_folder = File.expand_path("..", __FILE__)
   name, _ = Kitchen::MetadataChopper.extract("./metadata.rb")
   parent_folder = "/tmp/cookbooks"
