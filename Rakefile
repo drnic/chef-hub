@@ -11,7 +11,11 @@ require "kitchen"
 include FileUtils
 
 desc "Share cookbook"
-task :share do
+task :share, [:version] do |t, args|
+  unless version = args[:version]
+    $stderr.puts "USAGE: rake share[1.2.3]"
+    exit 1
+  end
   project_folder = File.expand_path("..", __FILE__)
   name, _ = Kitchen::MetadataChopper.extract("./metadata.rb")
   parent_folder = "/tmp/cookbooks"
@@ -20,6 +24,6 @@ task :share do
   mkdir_p(parent_folder)
   cp_r(project_folder, tmp_cookbook_folder)
   chdir(parent_folder) do
-    sh "knife cookbook site share #{name} #{CATEGORY} -o ."
+    sh "knife community release #{name} #{version} -o .."
   end
 end
