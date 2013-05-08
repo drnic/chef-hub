@@ -24,6 +24,6 @@ task :share, [:version] do |t, args|
   mkdir_p(parent_folder)
   cp_r(project_folder, tmp_cookbook_folder)
   chdir(parent_folder) do
-    sh "knife community release #{name} #{version} -o .."
+    sh "knife community release #{name} #{version} -o ."
   end
 end
