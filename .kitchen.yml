@@ -4,9 +4,9 @@ driver_plugin: vagrant
 platforms:
 - name: ubuntu-12.04
   driver_config:
-    # provider: virtualbox
-    provider: vmware_fusion
-    box: precise64
+    provider: virtualbox
+    # provider: vmware_fusion
+    box: precise64_squishy_2013-02-09
     require_chef_omnibus: true
 
 suites:
