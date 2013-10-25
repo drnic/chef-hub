@@ -1,4 +1,4 @@
-package "git"
+package "git-core"
 
 directory node.hub.src_path do
   owner "root"
