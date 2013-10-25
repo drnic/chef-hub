@@ -24,6 +24,8 @@ task :share, [:version] do |t, args|
   mkdir_p(parent_folder)
   cp_r(project_folder, tmp_cookbook_folder)
   chdir(tmp_cookbook_folder) do
+    sh "git init"
+    sh "git commit -a -m 'fake repo'"
     sh "knife community release #{name} #{version} -o .."
   end
 end
