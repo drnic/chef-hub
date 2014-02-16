@@ -17,3 +17,9 @@ attribute "git/src_path",
   description: "Path where hub git repo will be cloned",
   type: "string",
   required: "optional"
+
+attribute "hub/git_repo",
+  display_name: "Git repo",
+  description: "Git repo which will be cloned",
+  type: "string",
+  required: "optional"

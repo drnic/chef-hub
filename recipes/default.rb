@@ -13,7 +13,7 @@ bash "install hub" do
   cwd node.hub.src_path
   code <<-BASH
   if [[ ! -d hub ]]; then
-    git clone https://github.com/defunkt/hub.git
+    git clone #{node.hub.git_repo}
     cd hub
   else
     cd hub
