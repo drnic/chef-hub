@@ -13,13 +13,14 @@ bash "install hub" do
   cwd node.hub.src_path
   code <<-BASH
   if [[ ! -d hub ]]; then
-    git clone https://github.com/defunkt/hub.git
+    git clone #{node.hub.repo}
     cd hub
   else
     cd hub
     git pull origin master
   fi
-  rake install prefix=#{node.hub.install_path}
+  ./script/build
+  cp hub #{node.hub.install_path}
   BASH
   action :run
 end
